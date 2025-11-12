@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dadada, #ff5fc2);
+    
+
+}
+
+.grid-container {
+    
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr auto ;
+    grid-gap: 40px;
+    padding: 20px;
+    min-height: 20vh;
+    padding-bottom: 80px;
+}
+
+
+.navbar {
+    grid-column: 1 / 6;
+    background: #fd88d6;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+   
+}
+
+.navbar li {
+    margin: 0 15px;
+    
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar li:nth-child(1){
+    position: absolute;
+    left: 20px;
+}
+
+
+
+/* Image Section */
+.image-section {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+
+    
+    
+}
+img {
+    width: 100%;
+    /* transition: 10s ease-in; */
+}
+img:hover{
+    transform: rotate(360deg);
+}
+
+
+.image-section img {
+    max-width: 70%;
+
+    border-radius: 15px;
+    
+}
+
+/* Text Section */
+.text-section {
+    grid-column: 2 / 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #d3d3d3;
+    width: 50vh;
+}
+
+.text-section h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #c2c2c2;
+}
+.text-section h2 a{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fdfdfd;
+    text-decoration: none;
+}
+
+.text-section h1 a {
+grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fffefe;
+}
+.text-section h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.text-section p {
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* Footer */
+.footer {
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ text-align: center;
+ padding: 15px;
+ background: #fa4ceb;
+ color: white;
+ border: 50%;;
+ z-index: 1000;
+}
+@media only screen  and (max-width: 700px){
+    .image-section {
+        grid-column: 1 / 6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .text-section {
+        grid-column: 1 / 6;
+        display: flex;
+       flex-direction: center;
+       justify-content: center;
+       color: #f597e8;
+    }
+    }
+   
